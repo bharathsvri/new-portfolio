@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 function Footer() {
-  const year = new Date().getFullYear();
   return (
     <FooterContainer className="container">
       <hr />
