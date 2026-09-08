@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import aboutSvg from "../assets/designer-boy.jpg";
+import { getExperienceYears } from "../utils/experience";
 
 function About() {
   return (
@@ -14,17 +15,22 @@ function About() {
           <ul>
             <li>
               <p data-aos="fade-up">
-              I'm a dedicated <span style={{ color: "var(--clr-violet)" }}>Software Developer</span> with a passion for crafting web applications that are pivotal to the overall success of the product.
+                I'm a <span style={{ color: "var(--clr-violet)" }}>Full Stack Developer</span> with {getExperienceYears()} years of professional experience, currently working at <span style={{ fontWeight: 600 }}>MitrahSoft Solutions Pvt. Ltd.</span> (Kovilpatti), contributing to scalable and business-critical applications.
               </p>
             </li>
             <li>
               <p data-aos="fade-up">
-                I have hands-on experience with HTML5, CSS3, JavaScript and modern framework like Reactjs
+                My primary expertise is in backend engineering with <span style={{ color: "var(--clr-blue)" }}>Java, Spring Boot, Spring MVC</span>, and <span style={{ color: "var(--clr-blue)" }}>PostgreSQL</span>, combined with modern frontend development using <span style={{ color: "var(--clr-blue)" }}>Vue.js</span> and <span style={{ color: "var(--clr-blue)" }}>Angular</span>.
               </p>
             </li>
             <li>
               <p data-aos="fade-up">
-                I enjoy collaborating with teams, solving complex problems, and continuosly learning new technoloies to stay ahead in this ever-evolving field.
+                Hands-on experience with cloud, monitoring, and CI/CD tools including AWS CloudWatch, AWS CLI, Azure App Service, Azure Data Lake, Grafana, GitLab, Bitbucket, and JIRA.
+              </p>
+            </li>
+            <li>
+              <p data-aos="fade-up">
+                Currently learning and strengthening knowledge in System Design, Microservices Architecture, Java Memory Management, and Data Structures & Algorithms.
               </p>
             </li>
           </ul>

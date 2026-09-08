@@ -43,7 +43,10 @@ const SkillsContainer = styled.div`
     padding: 7% 14%;
   }
   .skills {
-    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 90px;
     text-align: center;
   }
   .skill-icon-img {

@@ -4,6 +4,7 @@ import { IoSend } from "react-icons/io5";
 import myImg from "../assets/profile-img.jpg";
 import TypeWriterEffect from "react-typewriter-effect";
 import { useMediaQuery } from "@react-hook/media-query";
+import { getExperienceYears } from "../utils/experience";
 
 function Hero() {
   const isSmallScreen = useMediaQuery("(max-width: 690px)");
@@ -29,7 +30,7 @@ function Hero() {
       </div>
       <div className="hero-title">
         <h1 data-aos="fade-up" data-aos-delay="800">
-          SOFTWARE DEVELOPER.
+          FULL STACK DEVELOPER.
         </h1>
       </div>
       <div className="hero-subtitle">
@@ -39,9 +40,10 @@ function Hero() {
             startDelay={1000}
             cursorColor="rgb(107, 36, 214)"
             multiText={[
-              "Proficient in Reactjs",
-              "Build Pixel Perferct Responsive websites",
-              "Proficient in Reactjs",
+              "Java & Spring Boot Developer",
+              "Full Stack Developer @ MitrahSoft",
+              "Building Scalable Enterprise Apps",
+              "Vue.js & Angular Development",
             ]}
             multiTextDelay={1000}
             typeSpeed={40}
@@ -51,7 +53,7 @@ function Hero() {
       </div>
       <div className="hero-description">
         <p data-aos="fade-up" data-aos-delay="1200">
-          A software delveoper with a passion for creating web applications.  I enjoy leaning new technologies and applying then to solve real-world problems.
+          A Java & Full Stack Developer with {getExperienceYears()} years of experience building and maintaining enterprise applications using Java, Spring Boot, and modern web technologies.
         </p>
       </div>
       <div
