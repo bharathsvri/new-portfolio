@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { skillsArr } from "../../src/utils/constants";
+import { skillsArr } from "../utils/constants";
 
 function Skills() {
   return (
