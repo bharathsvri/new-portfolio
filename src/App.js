@@ -11,6 +11,8 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ThemeButton from "./components/ThemeButton";
+import ReptileCursor from "./components/ReptileCursor";
+import ReptileButton from "./components/ReptileButton";
 
 const darkTheme = {
   text: "white",
@@ -36,16 +38,26 @@ const lightTheme = {
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isReptileActive, setIsReptileActive] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
   };
 
+  const toggleReptile = () => {
+    setIsReptileActive((prev) => !prev);
+  };
+
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <AppContainer className="App">
+        <ReptileCursor isDarkTheme={isDarkTheme} isEnabled={isReptileActive} />
         <Navigation />
         <ThemeButton toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        <ReptileButton
+          toggleReptile={toggleReptile}
+          isReptileActive={isReptileActive}
+        />
         <Header />
         <Hero />
         <About />
