@@ -11,8 +11,8 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ThemeButton from "./components/ThemeButton";
-import ReptileCursor from "./components/ReptileCursor";
-import ReptileButton from "./components/ReptileButton";
+import SpiderCursor from "./components/SpiderCursor";
+import SpiderButton from "./components/SpiderButton";
 
 const darkTheme = {
   text: "white",
@@ -38,25 +38,25 @@ const lightTheme = {
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  const [isReptileActive, setIsReptileActive] = useState(true);
+  const [isSpiderActive, setIsSpiderActive] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkTheme(!isDarkTheme);
   };
 
-  const toggleReptile = () => {
-    setIsReptileActive((prev) => !prev);
+  const toggleSpider = () => {
+    setIsSpiderActive((prev) => !prev);
   };
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <AppContainer className="App">
-        <ReptileCursor isDarkTheme={isDarkTheme} isEnabled={isReptileActive} />
+        <SpiderCursor isDarkTheme={isDarkTheme} isEnabled={isSpiderActive} />
         <Navigation />
         <ThemeButton toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-        <ReptileButton
-          toggleReptile={toggleReptile}
-          isReptileActive={isReptileActive}
+        <SpiderButton
+          toggleSpider={toggleSpider}
+          isSpiderActive={isSpiderActive}
         />
         <Header />
         <Hero />
